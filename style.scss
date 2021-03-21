@@ -9,16 +9,59 @@ $plumb: #444474;
     font-family: 'Poppins', sans-serif;
 }
 
+html, body {
+    height: 100%;
+}
+
 body {
     background: #8f7cec;
     color: $plumb;
+    overflow: hidden;
 
-    section.screen {
+    .pRect1, .pRect2, .pRect3 {
+        background: rgba(255, 177, 255, 0.288);
+        border-radius: 30px;
+        position: absolute;
+        z-index: 2;
+    }
+
+    .pRect1 {
+        width: 70%;
+        height: 100%;
+        transform: rotate(30deg);
+        left: -350px;
+        top: 300px;
+    }
+
+    .pRect2 {
+        width: 50%;
+        height: 70%;
+        transform: rotate(-60deg);
+        right: -400px;
+        top: -200px;
+    }
+
+    .pRect3 {
+        width: 50%;
+        height: 50%;
+        transform: rotate(80deg);
+        right: -250px;
+        top: 760px;
+    }
+
+    .wrapper {
+        height: 100%;
+        margin-bottom: -70px;
+        padding-top: 40px;
+
+        section.screen {
         background:#f2f2f4;
         border-radius: 10px;
         box-shadow: $b-shadow;
         max-width: 425px;
-        margin: 20px auto;
+        margin: auto;
+        position: relative;
+        z-index: 10;
 
         .title {
             padding: 40px 25px;
@@ -207,11 +250,18 @@ body {
         }
 
     }
+    }
 
     footer {
         background: $plumb;
-        margin-top: 100px;
-        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        bottom: 0;
+        height: 70px;
+        width: 100%;
+
 
         p {
             color: #fff;
