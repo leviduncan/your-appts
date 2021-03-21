@@ -1,0 +1,231 @@
+$b-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.301);
+$b-shadow2: 0 4px 20px 0 rgba(0, 0, 0, 0.199);
+$plumb: #444474;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #8f7cec;
+    color: $plumb;
+
+    section.screen {
+        background:#f2f2f4;
+        border-radius: 10px;
+        box-shadow: $b-shadow;
+        max-width: 425px;
+        margin: 20px auto;
+
+        .title {
+            padding: 40px 25px;
+
+            i {
+                margin-right: 15px;
+                font-size: 21px;
+            }
+
+            h3 {
+                font-size: 23px;
+                font-weight: bold;
+            }
+        }
+
+        .months {
+            background: #e9e0f1;
+            overflow: hidden;
+            display: flex;
+            flex-wrap: nowrap;
+            padding-left: 12px;
+
+            .month {
+                padding: 6px 12px;
+                text-transform: capitalize;
+                color: #8f8fa5;
+                font-size: 16px;
+            }
+
+            .active {
+                    font-weight: 900;
+                    color: $plumb;
+                }
+        }
+
+        .days {
+            background: rgb(180,133,241);
+            background: linear-gradient(90deg, rgba(180,133,241,1) 0%, #8f7cec 100%);
+            display: flex;
+            padding: 16px;
+            justify-content: space-evenly;
+
+            .day {
+                width: 34px;
+                height: 34px;
+                border-radius: 50%;
+                text-align: center;
+                padding: 5px 10px;
+                font-size: 16px;
+                color: rgba(238, 238, 238, 0.671);
+            }
+
+            .active {
+                width: 34px;
+                height: 34px;
+                background: #fff;
+                border-radius: 50%;
+                text-align: center;
+                color: $plumb;
+                font-weight: bold;
+                box-shadow: $b-shadow2;
+
+            }
+        }
+
+        .appts {
+            display: flex;
+            overflow: hidden;
+
+            .timeline {
+                
+                .add-appt {
+                    i {
+                    background: #00BFA5;
+                    color: #fff;
+                    font-size: 18px;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    text-align: center;
+                    padding: 10px;
+                    margin: 16px 16px 0 24px;
+                }
+                }
+
+                .line {
+                    height: 460px;
+                    width: 45px;
+                    border-right: solid #000 1px;
+                }
+            }
+
+            .appt-info {
+                padding-top: 24px;
+
+                .appt-items {
+                    .appointment {
+                        position: relative;
+                        left: -50px;
+                        top: 50px;
+                        margin-bottom: 24px;
+                        display: flex;
+
+                        .ls {
+                            padding: 0 10px;
+                            .circle {
+                                width: 8px;
+                                height: 8px;
+                                background: #000;
+                                border-radius: 50%;
+                            }
+                        }
+
+                        .rs {
+                            background: #fff;
+                            padding: 16px;
+                            width: 310px;
+                            box-shadow: $b-shadow2;
+                            margin: -4px 0 0 6px;
+
+                            &::before {
+                                content:"\A";
+                                border-style: solid;
+                                border-width: 10px 15px 10px 0;
+                                border-color: transparent #fff transparent transparent;
+                                position: absolute;
+                                left: 20px;
+                                top: -4px;
+                            }
+
+                            .top {
+                                display: flex;
+                                justify-content: space-between;
+                                font-size: 12px;
+
+                                .time {
+                                    font-weight: 900;
+                                }
+                            }
+                            .footer {
+                                display: flex;
+                                align-items: center;
+
+                                .photo {
+                                    width: 35px;
+                                    height: 35px;
+                                    border-radius: 50%;
+                                    background: url('https://storage.googleapis.com/orms-blog/1/2012/07/Daneel_Malgas.jpg');
+                                    background-size: cover;
+                                    background-position: center -10px;
+                                    background-repeat: no-repeat;
+                                    margin-right: 10px;
+                                }
+
+                                .photo2 {
+                                    width: 35px;
+                                    height: 35px;
+                                    border-radius: 50%;
+                                    background: url('https://zsuttonphoto.com/wp-content/uploads/2020/05/Los-Angeles-Beauty-Photography-2020.jpg');
+                                    background-size: cover;
+                                    background-position: center;
+                                    background-repeat: no-repeat;
+                                    margin-right: 10px;
+                                }
+
+                                .photo3 {
+                                    width: 35px;
+                                    height: 35px;
+                                    border-radius: 50%;
+                                    background: url('https://cms-assets.tutsplus.com/uploads/users/80/posts/26806/image/13-Selfies.jpg');
+                                    background-size: cover;
+                                    background-position: center;
+                                    background-repeat: no-repeat;
+                                    margin-right: 10px;
+                                }
+
+                                .name {
+                                    font-weight: bold;
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    footer {
+        background: $plumb;
+        margin-top: 100px;
+        padding: 20px;
+
+        p {
+            color: #fff;
+            font-size: 12px;
+            text-align: center;
+
+            a {
+                color: pink;
+
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
